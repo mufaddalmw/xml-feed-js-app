@@ -1,0 +1,46 @@
+{
+  "name": "xml-feed-js-app",
+  "version": "1.0.0",
+  "description": "after submitting xml url feed will be displayed ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mufaddalmw/xml-feed-js-app.git"
+  },
+  "keywords": [
+    "xml",
+    "singlepageapp"
+  ],
+  "author": "Mufaddal Motorwala",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mufaddalmw/xml-feed-js-app/issues"
+  },
+  "homepage": "https://github.com/mufaddalmw/xml-feed-js-app#readme",
+  "devDependencies": {
+    "babel-cli": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "browser-sync": "^2.18.12",
+    "browserify": "^14.4.0",
+    "del": "^3.0.0",
+    "glob": "^7.1.2",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^4.0.0",
+    "gulp-htmlmin": "^3.0.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-sourcemaps": "^2.6.0",
+    "gulp-uglify": "^3.0.0",
+    "vinyl-buffer": "^1.0.0",
+    "vinyl-source-stream": "^1.1.0"
+  },
+  "dependencies": {
+    "angular": "^1.6.4",
+    "angular-route": "^1.6.4",
+    "foundation-sites": "^6.3.1",
+    "jquery": "^3.2.1",
+    "lazysizes": "^4.0.0-rc3"
+  }
+}

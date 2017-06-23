@@ -1,0 +1,11 @@
+.site-header {
+  background: $body-font-color;
+  padding: rem-calc(12 0);
+  &__logo {
+    width: rem-calc(200);
+    display: inherit;
+  }
+}
+.sticky-header {
+  width: 100%;
+}

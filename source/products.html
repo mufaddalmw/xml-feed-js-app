@@ -1,0 +1,68 @@
+<!doctype html>
+<html class="no-js" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>XML Feed App</title>
+<link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="./assets/css/app.css">
+</head>
+<body>
+  <div data-sticky-container>
+    <div class="sticky sticky-header" data-sticky data-margin-top="0">
+      <!-- Header -->
+      <header class="site-header">
+        <div class="row column large-8">
+          <a href="index.php" class="site-header__logo"><img src="assets/img/centralpoint-logo.png" alt="centralpoint-logo"></a>
+        </div>
+      </header>
+    </div>
+  </div>
+
+  <div class="row column small-12 large-8">
+    <div class="product">
+      <div class="row">
+  <!-- each product item -->
+        <div class="column product__item">
+          <!-- image -->
+          <div class="product__col product__col-image">
+            <div class="product__img-bucket">
+              <a href="<?php echo $productURL; ?>">
+                <img data-src="" alt="" title="" class="lazyload">
+              </a>
+            </div>
+          </div>
+          <!-- description -->
+          <div class="product__col product__col-info">
+            <a href="#" title="" class="product__title"><h1></h1> </a>
+            <p><span class="product__id"></span></p>
+            <div class="product__info-description">
+              <p></p>
+              <ul class="bullet-list">
+
+                <li><strong></strong></li>
+
+              </ul>
+            </div>
+
+          </div>
+          <!-- price -->
+          <div class="product__col product__col-price">
+            <h4 class="product__price"></h4>
+            <span class="product__currency"></span>
+            <div class="">
+              <a href="" class="product__details">View full product details</a>
+            </div>
+          </div>
+        </div>
+        <!-- /end each product -->
+        
+      </div>
+      <!-- /end of row -->
+    </div>
+  </div>
+
+
+  <script src="./assets/js/bundle.js" async></script>
+  </body>
+  </html>

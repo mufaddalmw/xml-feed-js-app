@@ -1,0 +1,96 @@
+.product {
+  // list view column
+  margin: rem-calc(10);
+  @include breakpoint(medium){
+    margin: rem-calc(15);
+  }
+  &__col {
+    float: left;
+    padding: rem-calc(0 10);
+    @include breakpoint(medium){
+      padding: rem-calc(0 15);
+    }
+  }
+  // list view image column
+  &__col-image {
+    width: 18%;
+    @include breakpoint(medium){
+      border-right: solid 1px lighten($light-gray, 4%);
+    }
+    @include breakpoint(small only) {
+      width: 30%;
+    }
+  }
+  &__img-bucket {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+  }
+  &__item {
+    &:not(:last-child) {
+      border-bottom: 1px solid $light-gray;
+    }
+    background: $white;
+    padding: rem-calc(15 0);
+    @include breakpoint(medium){
+      padding: rem-calc(30 0);
+    }
+    transition: $global-transition;
+    border: 1px solid transparent;
+    &:hover, &:focus {
+      background: $white;
+      transform: translateY(-1px);
+      border-color:#e6e6e6;
+      box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
+    }
+  }
+  // list view content column
+  &__title {
+    color: inherit;
+  }
+  &__id {
+    font-size: $small-font-size;
+    display: inline-block;
+    font-weight: normal;
+  }
+  &__col-info {
+    width: 54%;
+    h1 {
+      font-size: rem-calc(18);
+      font-weight: bold;
+    }
+    @include breakpoint(small only) {
+      width: 68%;
+      border-left: solid 1px lighten($light-gray, 4%);
+    }
+  }
+  &__info-description {
+    font-size:$small-font-size;
+    color: darken($dark-gray, 15%);
+  }
+  &__col-price {
+    border-left: solid 1px lighten($light-gray, 4%);
+    @include breakpoint(small only) {
+      margin-left: 30%;
+    }
+  }
+  &__price {
+    font-weight: bold;
+    display: inline-block;
+    font-size: rem-calc(18);
+    color:$primary-color;
+    @include breakpoint(small only){
+      margin-top: 5px;
+      margin-bottom: 0;
+    }
+  }
+  &__currency {
+    font-size: $small-font-size;
+    color:$primary-color;
+    margin-left: rem-calc(5);
+  }
+  &__details {
+    font-size: rem-calc(14);
+    text-decoration: underline;
+  }
+}

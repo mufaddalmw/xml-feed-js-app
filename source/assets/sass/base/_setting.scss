@@ -1,0 +1,19 @@
+// colors
+$primary-color:#ef6624;
+$body-font-color:#121758;
+$anchor-color-hover:$primary-color;
+$body-background:#f0f0f0;
+
+// global
+$global-transition: all .15s ease-in-out 0s;
+$paragraph-margin-bottom:rem-calc(8);
+$paragraph-lineheight:1.4;
+$global-radius:6px;
+
+// buttons
+$button-background: $primary-color;
+$button-background-hover:scale-color($button-background, $lightness: -15%);
+$button-radius:$global-radius;
+
+// forms
+$input-radius	:$global-radius;
