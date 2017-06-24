@@ -68,7 +68,9 @@ gulp.task('browserify', function() {
     // .pipe(sourcemaps.init())
     .pipe(source('bundle.js'))
     .pipe(buffer()) // <----- convert from streaming to buffered vinyl file object
-    // .pipe(uglify())
+    .pipe(uglify({
+      // mangle:false
+    }))
     // .pipe(sourcemaps.write('/'))
     // Start piping stream to tasks!
     .pipe(gulp.dest('./build/assets/js'));
@@ -82,7 +84,11 @@ gulp.task('serve', ['sass'], function() {
     });
 });
 
-
+// js watch
+gulp.task('js-watch', ['browserify'], function(){
+  browserSync.reload();
+    // done();
+});
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
@@ -90,8 +96,9 @@ gulp.task('watch', function() {
   gulp.watch(paths.images, ['images']);
   gulp.watch(paths.pages, ['pages']);
   gulp.watch(paths.sass, ['sass']);
-
+  gulp.watch(paths.scripts, ['js-watch']);
+  gulp.watch('./build/**/*.html').on("change", browserSync.reload);
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'images', 'pages', 'sass', 'browserify']);
+gulp.task('default', ['watch', 'images', 'pages', 'sass', 'browserify', 'serve']);
