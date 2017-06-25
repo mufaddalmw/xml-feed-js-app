@@ -1,9 +1,43 @@
 .site-header {
   background: $body-font-color;
-  padding: rem-calc(12 0);
+  padding: rem-calc(8 0);
+  // logo
   &__logo {
     width: rem-calc(200);
     display: inherit;
+    float: left;
+    margin-top: rem-calc(6);
+  }
+  // shopping cart
+  &__cart {
+    float: right;
+    opacity: 0.85;
+    color: $white;
+    position: relative;
+    &:hover, &:focus {
+      color: $white;
+      opacity: 1;
+    }
+    &:before {
+      display: block;
+      line-height: 0.9;
+      font-size: rem-calc(22);
+    }
+    // cart number
+    span {
+      border-radius:100px;
+      background: $primary-color;
+      color: $white;
+      width: 20px;
+      height: 20px;
+      line-height: 1.4;
+      text-align: center;
+      font-weight: bold;
+      font-size: rem-calc(14);
+      position: absolute;
+      left: 18px;
+      top: -6px;
+    }
   }
 }
 .sticky-header {

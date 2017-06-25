@@ -4,7 +4,7 @@
   @include breakpoint(medium){
     margin: rem-calc(15);
   }
-  // common setting for each col 
+  // common setting for each col
   &__col {
     float: left;
     padding: rem-calc(0 10);
@@ -97,5 +97,32 @@
   &__details {
     font-size: rem-calc(14);
     text-decoration: underline;
+  }
+  // button add to cart
+  &__add-cart{
+    margin-top: rem-calc(10);
+    position: relative;
+  }
+  &__button-cart {
+
+    &:before {
+      font-size: rem-calc(20);
+      opacity: 0.65;
+      transition: $global-transition;
+
+    }
+    &:hover, &:focus {
+      &:before {
+        opacity: 1;
+      }
+
+    }
+  }
+  // product success callout
+  &__success-callout {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    font-size: $small-font-size;
   }
 }

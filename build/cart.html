@@ -1,0 +1,25 @@
+<!doctype html><html class="no-js" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XML Feed App</title><link rel="icon" href="./assets/img/favicon.png" type="image/x-icon"><link rel="stylesheet" href="./assets/css/app.css"></head><body><div id="page-content"><div data-sticky-container><div class="sticky sticky-header" data-sticky data-margin-top="0" data-stick-to="top"><header class="site-header"><div class="row column large-8"><a href="index.html" class="site-header__logo"><img src="assets/img/centralpoint-logo.png" alt="centralpoint-logo"></a><a href="cart.html" class="icon-shopping-cart site-header__cart">shopping cart <span id="cartNumberOfItem"></span></a></div></header></div></div><div class="row column small-12 large-8"><div class="product"><div class="row" id="cart"><script type="text/x-handlebars-template" id="cartTemplate"><!-- each product item -->
+          <div class="column product__item">
+            <!-- image -->
+            <div class="product__col product__col-image">
+              <div class="product__img-bucket">
+                <a href="{{productURL}}">
+                  <img data-src="{{imageURL}}" alt="{{productName}}" title="{{productName}}" class="lazyload">
+                </a>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="product__col product__col-info">
+              <a href="{{productURL}}" title="{{productName}}" class="product__title"><h1>{{productName}}</h1> </a>
+              <p><span class="product__id">{{productID}}</span></p>
+            </div>
+            <!-- price -->
+            <div class="product__col product__col-price">
+              <h4 class="product__price">{{price}}</h4>
+              <span class="product__currency">{{currency}}</span>
+              <div class="">
+                <a href="javascript:void(0);" data-id="{{i}}" data-js="deleteCartItem">Delete</a>
+              </div>
+            </div>
+          </div>
+                <!-- /end each product --></script></div><div class="row"><a href="products.html?url=https%3A%2F%2Fmufaddalmw.github.io%2Fxml-feed-js-app%2Fbuild%2Fassets%2Fdata%2Fproductfeed.xml" class="button margin-top">Continue Shopping</a></div></div></div></div><script src="./assets/js/bundle.js" async></script></body></html>

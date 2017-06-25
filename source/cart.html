@@ -23,8 +23,8 @@
 
   <div class="row column small-12 large-8">
     <div class="product">
-      <div class="row" id="products">
-        <script type="text/x-handlebars-template" id="productsTemplate">
+      <div class="row" id="cart">
+        <script type="text/x-handlebars-template" id="cartTemplate">
           <!-- each product item -->
           <div class="column product__item">
             <!-- image -->
@@ -39,40 +39,21 @@
             <div class="product__col product__col-info">
               <a href="{{productURL}}" title="{{productName}}" class="product__title"><h1>{{productName}}</h1> </a>
               <p><span class="product__id">{{productID}}</span></p>
-              <div class="product__info-description">
-                <p>
-                  {{description}}</p>
-                <ul class="bullet-list">
-                  <li><strong>{{category}}</strong></li>
-                </ul>
-              </div>
-
             </div>
             <!-- price -->
             <div class="product__col product__col-price">
               <h4 class="product__price">{{price}}</h4>
               <span class="product__currency">{{currency}}</span>
               <div class="">
-                <a href="{{productURL}}" class="product__details">View full product details</a>
-              </div>
-              <div class="product__add-cart">
-                <button class="icon-cart-plus product__button-cart button tiny"
-                data-productName="{{productName}}"
-                data-imageURL="{{imageURL}}"
-                data-productID="{{productID}}"
-                data-price="{{price}}"
-                data-currency="{{currency}}"
-                data-js="addToCart"
-                ></button>
-                <div class="callout small success product__success-callout" style="display:none;">
-                  Added to cart
-                </div>
+                <a href="javascript:void(0);" data-id="{{i}}" data-js="deleteCartItem">Delete</a>
               </div>
             </div>
           </div>
                 <!-- /end each product -->
         </script>
-
+      </div>
+      <div class="row">
+        <a href="products.html?url=https%3A%2F%2Fmufaddalmw.github.io%2Fxml-feed-js-app%2Fbuild%2Fassets%2Fdata%2Fproductfeed.xml" class="button margin-top">Continue Shopping</a>
       </div>
       <!-- /end of row -->
     </div>

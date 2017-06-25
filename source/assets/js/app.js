@@ -1,12 +1,12 @@
 global.$ = global.jQuery = require('jquery'); //load jquery
 require('foundation-sites'); //load foundation-sites
 var lazysizes = require('lazysizes'); //load lazy load images module
-var Handlebars = require('handlebars'); //load handlebars
+global.Handlebars = require('handlebars'); //load handlebars
 
 $(document).foundation(); //initialize foundation
 
 // products page - if products id is visible on page
-if( $('#products').is(':visible') ){
+if( $('#products').length > 0 ){
   var xmlurl, currentURL = window.location.href; //get current url in variable
   xmlurl = getParameterByName('url', xmlurl); //get url from function
   xmlurl = decodeURIComponent(xmlurl); //decode url - convert string in url format
@@ -29,7 +29,7 @@ if( $('#products').is(':visible') ){
         var $productName = $(this).find('name').text();
         var $description = $(this).find('description').text();
         var $price = $(this).find('price').text();
-        var $currency = $(this).find('currency').text();
+        var $currency = $(this).find('price').attr('currency');
         var $category = $(this).find('category').text();
         var $productURL = $(this).find('productURL').text();
         var $imageURL = $(this).find('imageURL').text();

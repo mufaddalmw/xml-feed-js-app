@@ -1,4 +1,4 @@
-<!doctype html><html class="no-js" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XML Feed App</title><link rel="icon" href="./assets/img/favicon.png" type="image/x-icon"><link rel="stylesheet" href="./assets/css/app.css"></head><body><div id="page-content"><div data-sticky-container><div class="sticky sticky-header" data-sticky data-margin-top="0" data-stick-to="top"><header class="site-header"><div class="row column large-8"><a href="index.html" class="site-header__logo"><img src="assets/img/centralpoint-logo.png" alt="centralpoint-logo"></a></div></header></div></div><div class="row column small-12 large-8"><div class="product"><div class="row" id="products"><script type="text/x-handlebars-template" id="productsTemplate"><!-- each product item -->
+<!doctype html><html class="no-js" lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>XML Feed App</title><link rel="icon" href="./assets/img/favicon.png" type="image/x-icon"><link rel="stylesheet" href="./assets/css/app.css"></head><body><div id="page-content"><div data-sticky-container><div class="sticky sticky-header" data-sticky data-margin-top="0" data-stick-to="top"><header class="site-header"><div class="row column large-8"><a href="index.html" class="site-header__logo"><img src="assets/img/centralpoint-logo.png" alt="centralpoint-logo"></a><a href="cart.html" class="icon-shopping-cart site-header__cart">shopping cart <span id="cartNumberOfItem"></span></a></div></header></div></div><div class="row column small-12 large-8"><div class="product"><div class="row" id="products"><script type="text/x-handlebars-template" id="productsTemplate"><!-- each product item -->
           <div class="column product__item">
             <!-- image -->
             <div class="product__col product__col-image">
@@ -27,6 +27,19 @@
               <span class="product__currency">{{currency}}</span>
               <div class="">
                 <a href="{{productURL}}" class="product__details">View full product details</a>
+              </div>
+              <div class="product__add-cart">
+                <button class="icon-cart-plus product__button-cart button tiny"
+                data-productName="{{productName}}"
+                data-imageURL="{{imageURL}}"
+                data-productID="{{productID}}"
+                data-price="{{price}}"
+                data-currency="{{currency}}"
+                data-js="addToCart"
+                ></button>
+                <div class="callout small success product__success-callout" style="display:none;">
+                  Added to cart
+                </div>
               </div>
             </div>
           </div>
