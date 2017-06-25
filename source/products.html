@@ -8,6 +8,7 @@
 <link rel="stylesheet" href="./assets/css/app.css">
 </head>
 <body>
+<div id="page-content">
   <div data-sticky-container>
     <div class="sticky sticky-header" data-sticky data-margin-top="0">
       <!-- Header -->
@@ -22,46 +23,48 @@
   <div class="row column small-12 large-8">
     <div class="product">
       <div class="row" id="products">
-<script type="text/x-handlebars-template" id="productsTemplate">
-  <!-- each product item -->
-  <div class="column product__item">
-    <!-- image -->
-    <div class="product__col product__col-image">
-      <div class="product__img-bucket">
-        <a href="{{productURL}}">
-          <img data-src="{{imageURL}}" alt="{{productName}}" title="{{productName}}" class="lazyload">
-        </a>
-      </div>
-    </div>
-    <!-- description -->
-    <div class="product__col product__col-info">
-      <a href="{{productURL}}" title="{{productName}}" class="product__title"><h1>{{productName}}</h1> </a>
-      <p><span class="product__id">{{productID}}</span></p>
-      <div class="product__info-description">
-        <p>
-          {{description}}</p>
-        <ul class="bullet-list">
-          <li><strong>{{category}}</strong></li>
-        </ul>
-      </div>
+        <script type="text/x-handlebars-template" id="productsTemplate">
+          <!-- each product item -->
+          <div class="column product__item">
+            <!-- image -->
+            <div class="product__col product__col-image">
+              <div class="product__img-bucket">
+                <a href="{{productURL}}">
+                  <img data-src="{{imageURL}}" alt="{{productName}}" title="{{productName}}" class="lazyload">
+                </a>
+              </div>
+            </div>
+            <!-- description -->
+            <div class="product__col product__col-info">
+              <a href="{{productURL}}" title="{{productName}}" class="product__title"><h1>{{productName}}</h1> </a>
+              <p><span class="product__id">{{productID}}</span></p>
+              <div class="product__info-description">
+                <p>
+                  {{description}}</p>
+                <ul class="bullet-list">
+                  <li><strong>{{category}}</strong></li>
+                </ul>
+              </div>
 
-    </div>
-    <!-- price -->
-    <div class="product__col product__col-price">
-      <h4 class="product__price">{{price}}</h4>
-      <span class="product__currency">{{currency}}</span>
-      <div class="">
-        <a href="{{productURL}}" class="product__details">View full product details</a>
-      </div>
-    </div>
-  </div>
-        <!-- /end each product -->
-</script>
+            </div>
+            <!-- price -->
+            <div class="product__col product__col-price">
+              <h4 class="product__price">{{price}}</h4>
+              <span class="product__currency">{{currency}}</span>
+              <div class="">
+                <a href="{{productURL}}" class="product__details">View full product details</a>
+              </div>
+            </div>
+          </div>
+                <!-- /end each product -->
+        </script>
 
       </div>
       <!-- /end of row -->
     </div>
   </div>
-  <script src="./assets/js/bundle.js" async></script>
-  </body>
-  </html>
+</div>
+
+<script src="./assets/js/bundle.js" async></script>
+</body>
+</html>
