@@ -4,6 +4,7 @@
   @include breakpoint(medium){
     margin: rem-calc(15);
   }
+  // common setting for each col 
   &__col {
     float: left;
     padding: rem-calc(0 10);
@@ -37,6 +38,7 @@
     }
     transition: $global-transition;
     border: 1px solid transparent;
+    // define hover of each product
     &:hover, &:focus {
       background: $white;
       transform: translateY(-1px);
@@ -54,6 +56,7 @@
     display: inline-block;
     font-weight: normal;
   }
+  // info column
   &__col-info {
     width: 54%;
     h1 {
@@ -69,6 +72,7 @@
     font-size:$small-font-size;
     color: darken($dark-gray, 15%);
   }
+  // price col
   &__col-price {
     border-left: solid 1px lighten($light-gray, 4%);
     @include breakpoint(small only) {
