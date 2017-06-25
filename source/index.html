@@ -13,7 +13,7 @@
       <!-- Header -->
       <header class="site-header">
         <div class="row column large-8">
-          <a href="index.php" class="site-header__logo"><img src="assets/img/centralpoint-logo.png" alt="centralpoint-logo"></a>
+          <a href="index.html" class="site-header__logo"><img src="assets/img/centralpoint-logo.png" alt="centralpoint-logo"></a>
         </div>
       </header>
     </div>
@@ -29,7 +29,8 @@
         </div>
         <label>
           URL
-          <input type="text" name="url" required placeholder="Enter only xml url" value="http://localhost:3000/assets/data/productfeed.xml">
+          <!-- http://localhost:3000/assets/data/productfeed.xml -->
+          <input type="url" name="url" pattern="url" required placeholder="Enter only xml url" value="http://pf.tradetracker.net/?aid=1&type=xml&encoding=utf-8&fid=251713&categoryType=2&additionalType=2&limit=10">
         </label>
         <button type="submit" name="button" class="button">Show Products</button>
       </form>

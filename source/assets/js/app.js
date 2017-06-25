@@ -6,7 +6,6 @@ var Handlebars = require('handlebars'); //load handlebars
 $(document).foundation(); //initialize foundation
 
 
-
 // function for get url parameter by name
 function getParameterByName(name, url) {
     if (!url) url = window.location.href;
@@ -18,19 +17,28 @@ function getParameterByName(name, url) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }//end
 
-// products page - if product id is visible on page
-if( $('#products').is(':visible') ){
-  var xmlurl = window.location.href; //get url
-  xmlurl = getParameterByName('url', xmlurl); //get url from function
-  xmlurl = decodeURIComponent(xmlurl); //decode url
+// get full path from url
+function getPathFromUrl(url) {
+  return url.split(/[?#]/)[0];
+}
+//end
 
+// products page - if products id is visible on page
+if( $('#products').is(':visible') ){
+  var xmlurl = window.location.href; //get querystring from url
+  xmlurl = getParameterByName('url', xmlurl); //get url from function
+  xmlurl = decodeURIComponent(xmlurl); //decode url - convert string in url format
+  var currentURL = window.location.href; //get current url in variable
+  var currentURLPath = getPathFromUrl(currentURL); //remove querystring from url with function
+  // make ajax request for entered xml url
   $.ajax({
      url: xmlurl,
      data: {
         format: 'xml'
      },
      error: function() {
-        $('#demo').html('<p>An error has occurred</p>');
+        // $('#products').html('<p>An error has occurred</p>');
+        $('#products').html("<div class='alert callout'>XMLHttpRequest cannot load <strong>" + xmlurl +"</strong>. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin <strong>" + currentURLPath + "</strong> is therefore not allowed access.</div>");
      },
      dataType: 'xml',
      success: function(xml) {
@@ -45,6 +53,14 @@ if( $('#products').is(':visible') ){
         var $category = $(this).find('category').text();
         var $productURL = $(this).find('productURL').text();
         var $imageURL = $(this).find('imageURL').text();
+
+        // trim longer description to 155 character
+        var $descriptionLength = $description.length;
+  			if ($descriptionLength > 155){
+  				var $description = $description.slice(0, 155);
+          $description = $description +'...';
+  			}
+        // end
 
         // handlebar js
         var source   = $("#productsTemplate").html();

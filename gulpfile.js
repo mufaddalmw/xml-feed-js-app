@@ -16,6 +16,7 @@ var paths = {
   scripts: './source/assets/js/**/*.js',
   images: './source/assets/img/**/*',
   sass: './source/assets/sass/**/*.scss',
+  data: './source/assets/data/**/*',
   pages: [
     './source/**/*.html',
     './source/**/*.php'
@@ -35,6 +36,14 @@ gulp.task('images', function() {
     // Pass in options to the task
     // .pipe(imagemin({optimizationLevel: 5}))
     .pipe(gulp.dest('./build/assets/img'));
+});
+
+// Copy all data/xml
+gulp.task('data', function() {
+  return gulp.src(paths.data)
+    // Pass in options to the task
+    // .pipe(imagemin({optimizationLevel: 5}))
+    .pipe(gulp.dest('./build/assets/data'));
 });
 
 // Copy all html pages
@@ -94,6 +103,7 @@ gulp.task('js-watch', ['browserify'], function(){
 gulp.task('watch', function() {
   gulp.watch('./source/assets/js/app.js', ['browserify']);
   gulp.watch(paths.images, ['images']);
+  gulp.watch(paths.data, ['data']);
   gulp.watch(paths.pages, ['pages']);
   gulp.watch(paths.sass, ['sass']);
   gulp.watch(paths.scripts, ['js-watch']);
@@ -101,4 +111,4 @@ gulp.task('watch', function() {
 });
 
 // The default task (called when you run `gulp` from cli)
-gulp.task('default', ['watch', 'images', 'pages', 'sass', 'browserify', 'serve']);
+gulp.task('default', ['watch', 'images', 'data', 'pages', 'sass', 'browserify', 'serve']);
