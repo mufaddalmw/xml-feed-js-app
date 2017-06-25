@@ -20,6 +20,7 @@ https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
 - HTML5 based markup
 - Use of CSS preprocessor
 - Use of jQuery for AJAX XML request and processing of xml data
+- Use of HTML5 localStorage for shopping cart (add and delete item)
 - Use of javascript template with handlebar js framework 
 - Use of lazyload images module
 - Use of 'async' attribute for asynchronous loading of scripts
