@@ -11,7 +11,9 @@ Default url should be:<br>
 
 ## Cross domain request:
 <pre>http://pf.tradetracker.net/?aid=1&type=xml&encoding=utf-8&fid=251713&categoryType=2&additionalType=2&limit=10</pre>
-For security reasons, browsers restrict cross-origin HTTP requests initiated from within scripts. For example, XMLHttpRequest and Fetch follow the same-origin policy. So, a web application using XMLHttpRequest or Fetch could only make HTTP requests to its own domain.
+For security reasons, browsers restrict cross-origin HTTP requests initiated from within scripts. For example, XMLHttpRequest and Fetch follow the same-origin policy. So, a web application using XMLHttpRequest or Fetch could only make HTTP requests to its own domain. 
+For futher please read - 
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS
 
 ## Features:
 - Front-end framework: Foundation
