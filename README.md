@@ -6,7 +6,12 @@ Default url should be:<br>
 
 ## Demo
 <a href="https://mufaddalmw.github.io/xml-feed-js-app/build/" target="_blank">Demo application</a><br>
-<a href="http://mufaddalmw.rf.gd/xml-feed-app/products-demo.php" target="_blank">Demo real-time data</a>
+<a href="https://mufaddalmw.github.io/xml-feed-js-app/build/products.html?url=https%3A%2F%2Fmufaddalmw.github.io%2Fxml-feed-js-app%2Fbuild%2Fassets%2Fdata%2Fproductfeed.xml" target="_blank">Demo real-time data</a>
+
+
+## Cross domain request:
+<pre>http://pf.tradetracker.net/?aid=1&type=xml&encoding=utf-8&fid=251713&categoryType=2&additionalType=2&limit=10</pre>
+For security reasons, browsers restrict cross-origin HTTP requests initiated from within scripts. For example, XMLHttpRequest and Fetch follow the same-origin policy. So, a web application using XMLHttpRequest or Fetch could only make HTTP requests to its own domain.
 
 ## Features:
 - Front-end framework: Foundation
