@@ -40,6 +40,7 @@
     &:hover, &:focus {
       background: $white;
       transform: translateY(-1px);
+      backface-visibility: hidden;
       border-color:#e6e6e6;
       box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.1);
     }
